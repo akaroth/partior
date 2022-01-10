@@ -1,2 +1,2 @@
-# partior
+# Partior
 Presentation for Partior
