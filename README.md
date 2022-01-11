@@ -14,7 +14,11 @@ Soft fork of the ethreum base code .
 ![images/basic_quorum_architecture.jpeg](images/basic_quorum_architecture.jpeg)
 
 * Quorum-node- Soft-fork of geth
-* Constellation- Implemets privacy features of Quorum
+* Constellation(Privacy Manager) - Implemets privacy features of Quorum
 
-  * - Part1 - Transcation manager which is responsible for transcation privacy
-  * - Part2 - siloed encryption/decryption managent -HSM
+The quorum node has the following feature
+
+* PoW consensus has been replaced with other consesus protocol like IBFT,raft or QBFT. 
+* The P2P layer allows only permissioned nodes. 
+* Gas pricing is removed. But the concept of gas still remains.
+* The state patricia trie is split into 2 . the public and the private trie
