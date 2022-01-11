@@ -1,4 +1,6 @@
-# Partior  
+# Quorum Blockchain and DevOps Practice.
+
+<h2> Quorum blockchain</h2>
 
 Soft fork of the ethreum base code .
 
@@ -18,7 +20,7 @@ Soft fork of the ethreum base code .
 
 The quorum node has the following feature
 
-* PoW consensus has been replaced with other consesus protocol like IBFT,raft or QBFT. 
+* PoW consensus has been replaced with other consesus protocol like IBFT,raft or QBFT. (_In the GoQuorum PoA consensus protocols, a group of nodes in the network act as validators (IBFT and QBFT), verifiers (Raft) or signers (Clique). Existing validators, verifiers, or signers vote to add or remove network nodes._)
 * The P2P layer allows only permissioned nodes. 
 * Gas pricing is removed. But the concept of gas still remains.
 * The state patricia trie is split into 2 . the public and the private trie
