@@ -68,7 +68,7 @@ Below are guidelines you need to follow based on the current system design and s
 
 <h4>DevOps Tool Security</h4>
 
-* Zero-Trust Security on daily DevOps - For internal systems that need web access such as jenkins,grafana,kibana,aws,archery, etc, you need to integrate with okta. Whitelist vpn ip in security group and build private connection between vpc and binance vpn.
+* Zero-Trust Security on daily DevOps - For internal systems that need web access such as jenkins,grafana,kibana,aws,archery, etc, you need to integrate with okta. Whitelist vpn ip in security group and build private connection between vpc.
 * Bastion Server v.s. AWS Session Manager - AWS Session Manager usually provides better security over open source or commercial bastion servers. If you need to have a dedicated bastion server solution, please reach DevSecOps team for discussions.
 
 <h4>Sensitive credential management and integrations</h4>
