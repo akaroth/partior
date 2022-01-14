@@ -61,7 +61,7 @@ Below are guidelines you need to follow based on the current system design and s
 <h4>AWS Account and IAM Management:</h4>
 
 * Root account management - Enable 2fa/yubikey for root account. The root account should be locked down and never use it in daily operation. Please transfer the ownership of the root account for centralized management. 
-* Terraform IAM Module - Join the binance terraform enterprise. Then you can use the IAM module to create a user or role for each user. If you can’t join binance terraform enterprise, make sure to enable 2fa/yubikey for each of iam user you created and only attach least privilege policy to iam user
+* Terraform IAM Module
 * Never create Access & Secret Key pairs on production systems - Never create access key/secret access key, use the following ways instead.
 * For ec2/ecs/lambda etc to access aws services, always use role
 * For local development, use saml2aws to get temp ak/sk
