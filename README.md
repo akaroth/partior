@@ -50,7 +50,7 @@ Below are guidelines you need to follow based on the current system design and s
 * One private route table which has no default route. It can be bound to redis subnet, rds subnet, etc.
 * One nat route table which is the default route to natgw for each availability zone. It can be bound to nat ec2 subnet, nat ecs subnet, etc.
 * Minimize exposure with public subnet design - Although you can have public subnet point to igw, usually you will only put external alb in this subnet. Use the following ways if you want to put ec2 in a public subnet.
-* For ssh access: using aws session manager instead
+* For ssh access: using aws session manager instead.
 * Open service for public access: using external alb and put ec2 behind it
 * EIP will only need to be bind to natgw, ec2 and rds usually doesn’t need to bind public ip
 * Security Group - Create a different security group for each of aws services such as ec2/alb/ecs/rds/redis etc even some of the resources may have the same security group rule. And just open specific and source with least privilege
