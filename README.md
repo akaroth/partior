@@ -54,7 +54,7 @@ Below are guidelines you need to follow based on the current system design and s
 * Open service for public access: using external alb and put ec2 behind it
 * EIP will only need to be bind to natgw, ec2 and rds usually doesn’t need to bind public ip
 * Security Group - Create a different security group for each of aws services such as ec2/alb/ecs/rds/redis etc even some of the resources may have the same security group rule. And just open specific and source with least privilege
-* Use terraform to design and manage your networking - If you can join binance terraform enterprise, we have vpc module to launch above best practice network at one click
+* Use terraform to design and manage your networking.
 * Networking Topology - For external system, you should use cloudfront->external alb->services arch, enable aws shield and waf on cloudfront and alb
 * S3 Bucket Access - For S3 bucket, never set s3 bucket as public access. Always put cloudfront in front of s3 for public access content such as static js file.
 
