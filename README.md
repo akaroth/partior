@@ -33,8 +33,10 @@ Validator - The miner , which is the block producer
 Nodes- These are the p2p nodes which actually form the network and more nodes can be added to the this network
 Tessera - This is the privacy manager , which has few functions like creation/manging
 
-```can i copy this code```
+```
+can i copy this code
 
+```
 <h2> Security on AWS</h2>
 
 Ground Rules 
