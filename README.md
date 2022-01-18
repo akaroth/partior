@@ -25,6 +25,16 @@ The quorum node has the following feature
 * Gas pricing is removed. But the concept of gas still remains.
 * The state patricia trie is split into 2 . the public and the private trie
 
+<h2>Demo</h2>
+
+The various components of the blockchain :- 
+
+Validator - The miner , which is the block producer
+Nodes- These are the p2p nodes which actually form the network and more nodes can be added to the this network
+Tessera - This is the privacy manager , which has few functions like creation/manging
+
+```can i copy this code```
+
 <h2> Security on AWS</h2>
 
 Ground Rules 
