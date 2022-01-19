@@ -27,16 +27,41 @@ The quorum node has the following feature
 
 <h2>Demo</h2>
 
-The various components of the blockchain :- 
+The various components of the blockchain :-
 
-Validator - The miner , which is the block producer
-Nodes- These are the p2p nodes which actually form the network and more nodes can be added to the this network
-Tessera - This is the privacy manager , which has few functions like creation/manging
+
+* Validator - The miner , which is the block producer
+* Nodes- These are the p2p nodes which actually form the network and more nodes can be added to the this network
+* Tessera - This is the privacy manager , which has few functions like creation/manging of private keys , hashing transactions cryptograhically etc.
+* rpc node - Can accept http/ws connection over the network for dapps or smart contracts.
+* ethstats(block explorer) - provides various information about transactions based trasaction hash, block number etc.
+* Monitoring and Logging - The standard stack for metrics is prometheus and grafana , along with ELK or splunk for monitoring
+
+<h2> Sending requests to rpc node</h2>
 
 ```
-can i copy this code
+curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":1}' -H 'Content-Type: application/json' http://localhost:8545
+```
+
+<h4>Count the peers</h4>
 
 ```
+curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":1}' -H 'Content-Type: application/json'  http://localhost:8545
+```
+<h4> Finding the block number</h4>
+
+```
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' -H 'Content-Type: application/json' http://localhost:8545
+```
+<h3>Private transactions</h3>
+
+This deploys the contract and sends an arbitrary value (47) from Member1 to Member3.
+
+Once done, it performs a read operation on the contract using the get function and the contract’s ABI, at the address specified.
+
+It then performs a write operation using the set function and the contract’s ABI, at the address and sets the value to 123.
+
+Lastly, it performs a read operation on all three members to verify that this is private between Member1 and Member3 only, and you should see that only Member1 and Member3 return the result of 123, and Member2 has an undefined value.
 <h2> Security on AWS</h2>
 
 Ground Rules 
