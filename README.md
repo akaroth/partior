@@ -78,6 +78,16 @@ It then performs a write operation using the set function and the contract’s A
 
 Lastly, it performs a read operation on all three members to verify that this is private between Member1 and Member3 only, and you should see that only Member1 and Member3 return the result of 123, and Member2 has an undefined value.
 
+After identifying the contract address, run the following command in each terminal:
+
+```
+var address = "// replace with your contract address"; 
+```
+```
+var abi = [{"constant":true,"inputs":[],"name":"storedData","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"x","type":"uint256"}],"name":"set","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"get","outputs":[{"name":"retVal","type":"uint256"}],"payable":false,"type":"function"},{"inputs":[{"name":"initVal","type":"uint256"}],"type":"constructor"}];
+var private = eth.contract(abi).at(address)
+```
+
 <h2> Basic CI/CD Demo</h2>
 
 The CI/CD shows how you can leverage github actions deploy a smart contract .
