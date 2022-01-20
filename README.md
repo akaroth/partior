@@ -100,7 +100,7 @@ Have Member1 set the state to the value 200 and confirm that only Member1 and Me
 In terminal window 1 (Member1):
 
 
-# send to Member3
+send to Member3
 
 ```
 private.set(200,{from:eth.accounts[0],privateFor:["1iTZde/ndBHvzhcl7V68x44Vx7pl8nwx9LqnM/AfJUg="]});
