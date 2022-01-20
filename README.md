@@ -80,6 +80,11 @@ Lastly, it performs a read operation on all three members to verify that this is
 
 After identifying the contract address, run the following command in each terminal:
 
+
+<h4>Read contract with get()</h4>
+
+Using eth.getTransactionReceipt(txHash), where txHash is the hash printed to the terminal after sending the transaction. The contract address is found in the result parameter contractAddress. It is also printed in the terminal when the private transaction is processed.
+
 ```
 var address = "// replace with your contract address"; 
 ```
