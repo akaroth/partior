@@ -80,6 +80,7 @@ Lastly, it performs a read operation on all three members to verify that this is
 
 <h2> Basic CI/CD Demo</h2>
 
+The CI/CD shows how you can leverage github actions deploy a smart contract .
 
 <h2> Security on AWS</h2>
 
