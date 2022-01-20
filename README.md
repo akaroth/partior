@@ -82,6 +82,8 @@ Lastly, it performs a read operation on all three members to verify that this is
 
 The CI/CD shows how you can leverage github actions deploy a smart contract .
 
+![github action workflow](images/github_actions.png)
+
 <h2> Security on AWS</h2>
 
 Ground Rules 
