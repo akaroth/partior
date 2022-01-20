@@ -17,7 +17,7 @@ module.exports = {
       port: 8545
     },
     quickstartWallet: {
-      provider: () => new PrivateKeyProvider(privateKey, "https://witty-warthog-46.loca.lt"),
+      provider: () => new PrivateKeyProvider(privateKey, "https://little-wolverine-2.loca.lt"),
       network_id: "*",
       type: "quorum",
       gasPrice: 0
