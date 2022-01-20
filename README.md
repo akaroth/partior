@@ -28,8 +28,23 @@ The quorum node has the following feature
 <h2>Demo</h2>
 
 The various components of the blockchain :-
+```
+*************************************
+Quorum Dev Quickstart
+*************************************
+----------------------------------
+List endpoints and services
+----------------------------------
+JSON-RPC HTTP service endpoint                 : http://localhost:8545
+JSON-RPC WebSocket service endpoint            : ws://localhost:8546
+Web block explorer address                     : http://localhost:25000/
+Prometheus address                             : http://localhost:9090/graph
+Cakeshop toolkit address                       : http://localhost:8999
+Grafana address                                : http://localhost:3000/d/a1lVy7ycin9Yv/goquorum-overview?orgId=1&refresh=10s&from=now-30m&to=now&var-system=All
 
-
+For more information on the endpoints and services, refer to README.md in the installation directory.
+****************************************************************
+```
 * Validator - The miner , which is the block producer
 * Nodes- These are the p2p nodes which actually form the network and more nodes can be added to the this network
 * Tessera - This is the privacy manager , which has few functions like creation/manging of private keys , hashing transactions cryptograhically etc.
@@ -62,6 +77,10 @@ Once done, it performs a read operation on the contract using the get function a
 It then performs a write operation using the set function and the contract’s ABI, at the address and sets the value to 123.
 
 Lastly, it performs a read operation on all three members to verify that this is private between Member1 and Member3 only, and you should see that only Member1 and Member3 return the result of 123, and Member2 has an undefined value.
+
+<h2> Basic CI/CD Demo</h2>
+
+
 <h2> Security on AWS</h2>
 
 Ground Rules 
