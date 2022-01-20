@@ -133,19 +133,3 @@ Below are guidelines you need to follow based on the current system design and s
 <h4>Sensitive credential management and integrations</h4>
 
 * Credentials such as database access credentials, wallet key, api key should be kept in AWS secrets manager (KMS backed), where applications need to integrate AWS SDK for access.  Note that we usually need to separate the access credentials for applications from manual operations - like database management.
-
-
-<h4>Database Management</h4>
-
-* Centralized database management of the DBA team is suggested for production systems.  Development team can leverage “Archery” for database access with necessary permission granted.  
-
-* Enable system audit logs 
-* Enable cloudtrail and keep the log in aws s3
-* Enable aws session manager log and keep it in aws s3
-* Enable cloudfront and ALB log and keep them in aws s3
-
-
-<h4>AWS Security Services & Account Management</h4>
-
-* Turn on GuardDuty, and Access Analyzer for all accounts to send their logs and alerts to the Security tunnel ( webex, pagerduty).
-* We usually recommend account separation to isolate the various business systems and production environments from others. For instance, DEV, QA should have a dedicated account from the PROD environment. 
