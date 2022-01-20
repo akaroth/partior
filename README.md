@@ -93,6 +93,41 @@ var abi = [{"constant":true,"inputs":[],"name":"storedData","outputs":[{"name":"
 var private = eth.contract(abi).at(address)
 ```
 
+
+<h4>Write to the contract with set()</h4>
+Have Member1 set the state to the value 200 and confirm that only Member1 and Member3 can view the new state.
+
+In terminal window 1 (Member1):
+
+
+# send to Member3
+
+```
+private.set(200,{from:eth.accounts[0],privateFor:["1iTZde/ndBHvzhcl7V68x44Vx7pl8nwx9LqnM/AfJUg="]});
+"0xacf293b491cccd1b99d0cfb08464a68791cc7b5bc14a9b6e4ff44b46889a8f70"
+```
+
+You can check the log files in data/logs/ to see each node validating the block with this new private transaction. Once the block containing the transaction is validated, you can check the state from each of the members.
+
+In terminal window 1 (Member1):
+
+
+private.get()
+200
+In terminal window 2 (Member2):
+
+
+private.get()
+undefined
+In terminal window 3 (Member3):
+
+
+private.get()
+200
+Member2 can’t read the state.
+
+All nodes are validating the same blockchain of transactions, with the private transactions containing only a 512-bit hash in place of the transaction data, and only the parties to the private transactions can view and update the state of the private contracts.
+
 <h2> Basic CI/CD Demo</h2>
 
 The CI/CD shows how you can leverage github actions deploy a smart contract .
